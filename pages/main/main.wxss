@@ -1,0 +1,83 @@
+/* pages/main/main.wxss */
+
+.con-main {
+  padding: 30rpx;
+}
+
+.input-search {
+  margin: 0 20rpx;
+  padding: 10rpx 20rpx 10rpx 70rpx;
+  height: 50rpx;
+  border-radius: 35rpx;
+  background: #ff0;
+}
+
+.input-search::after {
+  content: " ";
+  display: inline-block;
+  clear: both;
+  width: 50rpx;
+  height: 50rpx;
+  background: url('https://ewrweioruwer-1301300710.cos.ap-chengdu.myqcloud.com/icon/search.svg') no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
+}
+
+.arc-list {
+  padding: 60rpx 0;
+}
+
+.list-item {
+  margin: 30rpx 0;
+  padding: 10rpx;
+  border: 1rpx solid #ccc;
+  font-size: 12px;
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-title {
+  width: 80%;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item-pay {
+  color: #f00;
+}
+
+.second-row {
+  display: flex;
+  margin: 30rpx 0;
+}
+
+.item-location {
+  margin-right: 70rpx;
+  background: yellow;
+  vertical-align: text-top;
+}
+
+image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.third-row {
+  display: flex;
+}
+
+.item-dailyknots {
+  padding: 5rpx;
+  border: 1px solid #ccc;
+}
+
+.item-popular {
+  padding: 5rpx;
+   border: 1px solid #ff0;
+  background: #ff0;
+}

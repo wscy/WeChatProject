@@ -1,0 +1,27 @@
+<!--pages/main/main.wxml-->
+<view class='con-main'>
+  <view class='input-search'>
+    <input type='text' style='float:left;height:100%;width:85%'
+    placeholder='请输入您想查找的职位' placeholder-style='font-size:12px;'></input>
+  </view>
+  <view class='arc-list'>
+    <text style='font-size:20px;font-weight:bold'>为你推荐</text>
+    <block  wx:for='{{items}}'  wx:key='{{item.ID}}'>
+      <view class='list-item'>
+        <view class='first-row'>
+          <view class='item-title'>{{item.title}}</view>
+          <view class='item-pay'>{{item.pay}}</view>
+        </view>
+        <view class='second-row'>
+          <image src='https://ewrweioruwer-1301300710.cos.ap-chengdu.myqcloud.com/icon/location.svg'></image>
+          <view class='item-location'>{{item.location}}</view>
+          <view class='item-duration'>{{item.duration}}</view>
+        </view>
+        <view class='third-row'>
+          <view class='item-dailyknots'>{{item.dailyknots}}</view>
+          <view class='item-popular'>{{item.popular}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
