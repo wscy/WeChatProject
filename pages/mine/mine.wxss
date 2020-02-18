@@ -1,1 +1,31 @@
 /* pages/mine/mine.wxss */
+
+.regist {
+  display: flex;
+  padding: 30rpx;
+  background: #ff0;
+  vertical-align: middle;
+}
+
+.regist image {
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.function {
+  margin-top: 300rpx;
+}
+
+.setting {
+  display: flex;
+  margin-top: -1rpx; /* 消除重叠的border */
+  padding: 10rpx 0;
+  border-top: 1px solid #ff0;
+  border-bottom: 1px solid #ff0;
+}
+
+.setting image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 20rpx;
+}

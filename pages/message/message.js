@@ -5,7 +5,112 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    barList:["进行中","已成功","已失败","已过期"],
+    items: [{
+      ID: 1001,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1002,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    }, {
+      ID: 1003,
+      title: "简单小任务，在家躺赚钱",
+      pay: "300元 / 天",
+      location: "武侯区",
+      duration: "长期",
+      dailyknots: "日结",
+      popular: "人气"
+    },]
   },
 
   /**

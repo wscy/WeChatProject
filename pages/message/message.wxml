@@ -1,3 +1,25 @@
 <!--pages/message/message.wxml-->
-<view>
+<view class='topBar'>
+  <block wx:for="{{barList}}">
+    <view class='bar-item'>{{item}} </view>
+  </block>
+</view>
+<view class='arc-list'>
+  <block wx:for='{{items}}' wx:key='{{item.ID}}'>
+    <view class='list-item'>
+      <view class='first-row'>
+        <view class='item-title'>{{item.title}}</view>
+        <view class='item-pay'>{{item.pay}}</view>
+      </view>
+      <view class='second-row'>
+        <image src='https://ewrweioruwer-1301300710.cos.ap-chengdu.myqcloud.com/icon/location.svg'></image>
+        <view class='item-location'>{{item.location}}</view>
+        <view class='item-duration'>{{item.duration}}</view>
+      </view>
+      <view class='third-row'>
+        <view class='item-dailyknots'>{{item.dailyknots}}</view>
+        <view class='item-popular'>{{item.popular}}</view>
+      </view>
+    </view>
+  </block>
 </view>

@@ -1,1 +1,70 @@
 /* pages/message/message.wxss */
+.topBar{
+  display: flex;
+  padding:20rpx;
+  /* border:1px solid black; */
+  background: #ff0;
+  font-size: 14px;
+  color:#555;
+}
+.bar-item{
+  margin-right: 50rpx;
+}
+.arc-list {
+  padding: 0 30rpx;
+}
+
+.list-item {
+  margin: 30rpx 0;
+  padding: 10rpx;
+  border: 1rpx solid #ccc;
+  font-size: 12px;
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-title {
+  width: 80%;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item-pay {
+  color: #f00;
+}
+
+.second-row {
+  display: flex;
+  margin: 30rpx 0;
+}
+
+.item-location {
+  margin-right: 70rpx;
+  background: yellow;
+  vertical-align: text-top;
+}
+
+image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.third-row {
+  display: flex;
+}
+
+.item-dailyknots {
+  padding: 5rpx;
+  border: 1px solid #ccc;
+}
+
+.item-popular {
+  padding: 5rpx;
+   border: 1px solid #ff0;
+  background: #ff0;
+}

@@ -1,2 +1,17 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class='regist'>
+  <view class='avatar'>
+    <image src='/icon/ring.svg'></image>
+  </view>
+  <text style='margin-left:10px;line-height: 100px;font-size:20px;'>点击注册</text>
+</view>
+<view class='function'>
+  <view class="setting">
+    <image src="/icon/setting.png"></image>
+    <text>设置</text>
+  </view>
+  <view class="setting">
+   <image src="/icon/contact.png"></image>
+    <text>联系客服</text>
+  </view>
+</view>
