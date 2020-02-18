@@ -1,7 +1,7 @@
 /* pages/message/message.wxss */
 .topBar{
   display: flex;
-  padding:20rpx;
+  padding:31rpx;
   /* border:1px solid black; */
   background: #ff0;
   font-size: 14px;
