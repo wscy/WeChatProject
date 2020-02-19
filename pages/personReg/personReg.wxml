@@ -1,0 +1,135 @@
+<!--pages/personReg/personReg.wxml-->
+<form bindsubmit="postMessage">
+
+  <view class='item'>
+    <text class='require title'>性别</text>
+    <view class='content'>
+      <radio-group name="gender">
+        <radio class="form-radio" value='male' color="#ff0">男</radio>
+        <radio class="form-radio" value='female' color="#ff0">女</radio>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class='require title'>身份</text>
+    <view class='content'>
+      <radio-group name="isStu">
+        <radio class="form-radio" value='stu' color="#ff0">学生</radio>
+        <radio class="form-radio" value='nostu' color="#ff0">非学生</radio>
+      </radio-group>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class='require title'>身高(cm)</text>
+    <view class='content'>
+      <input name="height" placeholder='请输入你的身高'></input>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class='require title'>年龄</text>
+    <view class='content'>
+      <input name="age" placeholder='请输入你的年龄'></input>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class='require title'>身份证号码</text>
+    <view class='content'>
+      <input name="height" placeholder='请输入你的身份证号码'></input>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class='require title'>手机</text>
+    <view class='content'>
+      <input name="phone" placeholder='请输入你的手机号'></input>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class=' title'>学历</text>
+    <view class='content' bindtap='chooseEdu'>
+      <block wx:if="{{education}}">
+        <input name="education" disabled='true' value="{{education}}" placeholder='{{education}}' placeholder-style="color:#000"></input>
+      </block>
+      <block wx:else>
+        <input name="education" disabled='true' value="{{education}}" placeholder='请选择你的学历'></input>
+      </block>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class='title'>工作年限</text>
+    <view class='content' bindtap='chooseWorkLife'>
+      <block wx:if="{{workLife}}">
+        <input name="workLife" disabled='true' value="{{workLife}}" placeholder='{{workLife}}' placeholder-style="color:#000"></input>
+      </block>
+      <block wx:else>
+        <input name="workLife" disabled='true' value="{{workLife}}" placeholder='请选择你的工作年限'></input>
+      </block>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class=' title'>微信</text>
+    <view class='content'>
+      <input name="weChat" placeholder='请输入你的微信号'></input>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class=' title'>QQ号码</text>
+    <view class='content'>
+      <input name="qq" placeholder='请输入你的qq号码'></input>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class=' title'>邮箱</text>
+    <view class='content'>
+      <input name="email" placeholder='请输入你的邮箱'></input>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class=' title'>现居地址</text>
+    <view class='content'>
+      <input name="location" placeholder='请输入你的现居地址'></input>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class=' title'>籍贯</text>
+    <view class='content'>
+      <input name="naLocation" placeholder='请输入你的籍贯'></input>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class=' title'>求职状态</text>
+    <view class='content' bindtap='chooseState'>
+      <block wx:if="{{state}}">
+        <input name="state" disabled='true' value="{{state}}" placeholder='{{state}}' placeholder-style="color:#000"></input>
+      </block>
+      <block wx:else>
+        <input name="state" disabled='true' value="{{state}}" placeholder='请选择你的工作年限'></input>
+      </block>
+    </view>
+  </view>
+
+  <view class='item'>
+    <text class=' title'>自我评价</text>
+    <view class='content'>
+      <input name="evaluate" placeholder='请输入你的自我评价'></input>
+    </view>
+  </view>
+
+  <view class='btn-area'>
+    <button style='margin:25rpx 80rpx;width:78%;border-color:#ff0;' class="btn-submit" plain="true"  form-type='submit' size='mini'>
+      提交
+    </button>
+  </view>
+</form>

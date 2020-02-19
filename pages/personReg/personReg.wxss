@@ -1,0 +1,37 @@
+/* pages/personReg/personReg.wxss */
+.item{
+  display: flex;
+  padding:20rpx;
+  /* height: 50rpx; */
+  border-bottom:1px solid #ff0;
+  font-size: 28rpx;
+}
+.require:first-child::after{
+  content: "*";
+  float: right;
+  /* margin-right: -20rpx; */
+  color: #f00;
+}
+.title{
+  width: 30%;
+  text-align: justify;
+  text-align-last:justify;
+  line-height: inherit; /* 让左右水平线对齐至关重要*/
+}
+.title::after{
+  content: ":";
+  float: right;
+  color: #000;
+}
+.content{
+  width:100%;
+  margin-left:20rpx;
+}
+.form-radio{
+  margin-top:-10px; /*默认radio有点低于水平线*/
+  font-size: 40rpx;
+  transform: scale(0.7); /*调节radio圆圈大小*/
+}
+.btn-submit{
+  border: 1px solid #ff0;
+}

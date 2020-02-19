@@ -2,7 +2,6 @@
 .topBar{
   display: flex;
   padding:31rpx;
-  /* border:1px solid black; */
   background: #ff0;
   font-size: 14px;
   color:#555;

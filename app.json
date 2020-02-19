@@ -1,10 +1,12 @@
 {
   "pages": [
+    "pages/personReg/personReg",
     "pages/mine/mine",
     "pages/message/message",
     "pages/main/main",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/businessReg/businessReg"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,7 +15,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "selectedColor":"#000",
+    "selectedColor": "#000",
     "backgroundColor": "#ff0",
     "borderStyle": "white",
     "list": [
