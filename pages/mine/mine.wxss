@@ -12,6 +12,32 @@
   height: 220rpx;
 }
 
+.username {
+  margin-left: 10px;
+  line-height: 100px;
+  font-size: 20px;
+}
+.my-message{
+  display: flex;
+  margin-top:10rpx;
+  padding:30rpx;
+  border:1px solid #ff0; 
+}
+.left{
+  flex:7;
+}
+.left-title{
+  font-size:50rpx;font-weight:bold
+}
+.right{
+  flex: 3;
+  /* padding-left: 100rpx; */
+}
+.mypay::after{
+  content:"元";
+  color:red;
+  font-size: 35rpx;
+}
 .function {
   margin-top: 300rpx;
 }
@@ -23,9 +49,11 @@
   border-top: 1px solid #ff0;
   border-bottom: 1px solid #ff0;
 }
-.custom{
+
+.custom {
   border-top: 0;
 }
+
 .setting image {
   width: 50rpx;
   height: 50rpx;

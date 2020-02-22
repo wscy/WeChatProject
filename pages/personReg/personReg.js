@@ -48,11 +48,11 @@ Page({
   /**
    * 选择求职状态
    */
-  chooseState: function () {
+  chooseState: function() {
     var that = this
     wx.showActionSheet({
       itemList: ["在职", "离职"],
-      success: function (res) {
+      success: function(res) {
         const itemList = ["在职", "离职"]
         for (let i = 0, len = itemList.length; i < len; i += 1)
           if (res.tapIndex == i) {
@@ -67,8 +67,48 @@ Page({
   /**
    * 表单提交
    */
-  postMessage:function(e){
-    console.log("--------->",e.detail.value);
+  postMessage: function(e) {
+    console.log("personReg--------->", e.detail.value);
+    const {
+      userName,
+      age,
+      education,
+      email,
+      evaluate,
+      gender,
+      height,
+      idCard,
+      isStu,
+      location,
+      naLocation,
+      phone,
+      qq,
+      state,
+      weChat,
+      workLife
+    } = e.detail.value
+    const userInfo = {
+      userName,
+      age,
+      education,
+      email,
+      evaluate,
+      gender,
+      height,
+      idCard,
+      isStu,
+      location,
+      naLocation,
+      phone,
+      qq,
+      state,
+      weChat,
+      workLife
+    }
+    wx.setStorageSync("userInfo", userInfo)
+    wx.navigateBack({
+      delta:1,
+    })
   },
   /**
    * 生命周期函数--监听页面加载

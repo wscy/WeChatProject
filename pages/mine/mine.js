@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    
   },
   /**
    * 弹出操作框
@@ -21,22 +21,21 @@ Page({
     wx.showActionSheet({
       itemList: ['个人注册', '企业注册'],
       success: function(res) {
-        if (res.tapIndex ===0) {
+        if (res.tapIndex === 0) {
           wx.navigateTo({
             url: '/pages/personReg/personReg',
             success: function() {},
             fail: function() {},
             complete: function() {}
           })
-        }else if(res.tapIndex===1){
+        } else if (res.tapIndex === 1) {
           wx.navigateTo({
             url: '/pages/businessReg/businessReg',
-            success: function () { },
-            fail: function () { },
-            complete: function () { }
+            success: function() {},
+            fail: function() {},
+            complete: function() {}
           })
-        }else{
-        }
+        } else {}
       },
       fail(res) {
         console.log(res.errMsg)
@@ -54,7 +53,44 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    const userInfo = wx.getStorageSync("userInfo");
+    console.log("--->userInfo", userInfo)
+    const {
+      userName,
+      age,
+      education,
+      email,
+      evaluate,
+      gender,
+      height,
+      idCard,
+      isStu,
+      location,
+      naLocation,
+      phone,
+      qq,
+      state,
+      weChat,
+      workLife
+    } = userInfo
+    this.setData({
+      userName: userName,
+      age: age,
+      education: education,
+      email: email,
+      evaluate: evaluate,
+      gender: gender,
+      idCard: idCard,
+      height: height,
+      isStu: isStu,
+      location,
+      naLocation,
+      phone,
+      qq,
+      state,
+      weChat,
+      workLife
+    })
   },
 
   /**

@@ -32,6 +32,9 @@
   font-size: 40rpx;
   transform: scale(0.7); /*调节radio圆圈大小*/
 }
+.gender{
+  margin-left: 8rpx; /*由于radio样式，和下面没对齐*/
+}
 .btn-submit{
   border: 1px solid #ff0;
 }

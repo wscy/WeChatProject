@@ -1,12 +1,17 @@
 <!--pages/personReg/personReg.wxml-->
 <form bindsubmit="postMessage">
-
+ <view class='item'>
+    <text class='require title'>姓名</text>
+    <view class='content'>
+      <input name="userName" placeholder='请输入你的姓名'></input>
+    </view>
+  </view>
   <view class='item'>
     <text class='require title'>性别</text>
     <view class='content'>
       <radio-group name="gender">
-        <radio class="form-radio" value='male' color="#ff0">男</radio>
-        <radio class="form-radio" value='female' color="#ff0">女</radio>
+        <radio class="gender form-radio" value='male' color="#ff0">男</radio>
+        <radio class="gender form-radio" value='female' color="#ff0">女</radio>
       </radio-group>
     </view>
   </view>
@@ -38,7 +43,7 @@
   <view class='item'>
     <text class='require title'>身份证号码</text>
     <view class='content'>
-      <input name="height" placeholder='请输入你的身份证号码'></input>
+      <input name="idCard" placeholder='请输入你的身份证号码'></input>
     </view>
   </view>
 

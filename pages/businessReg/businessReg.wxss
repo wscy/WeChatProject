@@ -1,1 +1,32 @@
 /* pages/businessReg/businessReg.wxss */
+.item{
+  padding:30rpx 30rpx 10rpx 30rpx;
+  border-bottom:1px solid #ff0;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.require::before{
+  content: "*";
+  float: left;
+  margin-left: -20rpx;  /*让星号往左边靠*/
+  color: #f00;
+}
+.title{
+  line-height: inherit; /* 让左右水平线对齐至关重要*/
+}
+.content{
+  margin-top: 30rpx;
+}
+.choose-image{
+  float: right;
+  width: 220rpx;
+  height: 50rpx;
+  margin: -10rpx 250rpx 0 0;  /*button往上面靠一点与左边对齐*/
+  font-size: 28rpx;
+  font-weight: normal;
+  line-height: 50rpx;
+  color:rgb(138,128,128);
+}
+.btn-submit{
+  border: 1px solid #ff0;
+}

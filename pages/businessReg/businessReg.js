@@ -14,7 +14,47 @@ Page({
   onLoad: function (options) {
 
   },
-
+  /**
+   * 检查企业名称是否符合标准
+   */
+  checkName:function(event){
+    if(event.detail.value==""){
+      wx.showToast({
+        title: '企业名称不能为空',
+        icon:'none'
+      })
+    } if (event.detail.value.length<4) {
+      wx.showToast({
+        title: '企业名称要大于4个字',
+        icon: 'none'
+      })
+    }
+  },
+  
+  /**
+   * 选择营业执照图片
+   */
+  chooseImage:function(){
+    const that=this
+    wx.chooseMedia({
+      mediaType: ['image'],
+      sourceType: ['album', 'camera'],
+      sizeType: ['compressed'],
+      success:function(res){
+        console.log(res.tempFiles[0].tempFilePath)
+        that.setData({
+          filePath: res.tempFiles[0].tempFilePath
+        })
+      }
+    })
+  },
+  /**
+   * 表单提交
+   */
+  postForm: function (e) {
+    console.log("--------->", e.detail.value);
+    
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

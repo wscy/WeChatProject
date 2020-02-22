@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/personReg/personReg",
     "pages/mine/mine",
+    "pages/personReg/personReg",
+    "pages/businessReg/businessReg",
     "pages/message/message",
     "pages/main/main",
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/businessReg/businessReg"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
