@@ -1,25 +1,61 @@
 <!--pages/message/message.wxml-->
-<view class='topBar'>
-  <block wx:for="{{barList}}">
-    <view class='bar-item'>{{item}} </view>
-  </block>
-</view>
-<view class='arc-list'>
-  <block wx:for='{{items}}' wx:key='{{item.ID}}'>
-    <view class='list-item'>
-      <view class='first-row'>
-        <view class='item-title'>{{item.title}}</view>
-        <view class='item-pay'>{{item.pay}}</view>
-      </view>
-      <view class='second-row'>
-        <image src='https://ewrweioruwer-1301300710.cos.ap-chengdu.myqcloud.com/icon/location.svg'></image>
-        <view class='item-location'>{{item.location}}</view>
-        <view class='item-duration'>{{item.duration}}</view>
-      </view>
-      <view class='third-row'>
-        <view class='item-dailyknots'>{{item.dailyknots}}</view>
-        <view class='item-popular'>{{item.popular}}</view>
-      </view>
+
+<view class='container'>
+
+  <view class='hr_w'></view>
+  <!--  顶部TabList  -->
+  <view wx:if="{{tab_config.fixed}}" class="tab-bar">
+    <view wx:for="{{tab_config.tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{tab_config.active_tab==index?                    'tab-active':''}} " style="width: {{tab_config.item_width}}px;">
+      <text>{{item}}</text>
     </view>
-  </block>
+    <view style="width: {{tab_config.item_width-tab_config.underline.margins}}px; left: {{tab_config.underline.offset}}px;" class="under-line withAnimate"></view>
+  </view>
+  <scroll-view wx:else class="tab-bar" scroll-x="true" bindscroll="onScroll" style="width: 100%;" scroll-left="{{tab_config.tab_left}}">
+    <view wx:for="{{tab_config.tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{tab_config.active_tab==index?'tab-active':''}} " style="width: {{tab_config.item_width}}px;">
+      <text>{{item}}</text>
+    </view>
+    <view style="width: {{tab_config.item_width-tab_config.underline.margins}}px; left: {{tab_config.underline.offset+10}}px;" class="under-line withAnimate"></view>
+  </scroll-view>
+
+  <!--  滑动页面  -->
+  <swiper class='swiper' bindchange='bindChange' current='{{swipe_config.current}}' indicator-dots='{{swipe_config.indicator_dots}}' autoplay='{{swipe_config.autoplay}}'>
+
+    <block wx:for="{{orderList}}" wx:for-item='orders'>
+      <swiper-item class='swiper-item'>
+        <!--  页面内容  -->
+        <scroll-view scroll-y='true' style="width: 100%;height:100%;">
+
+
+
+          <!-- <view>
+            <text class='text'>{{orderList[index]}}</text>
+          </view> -->
+          <block>
+            <view class='itemView' wx:for="{{orderList[index].data}}">
+              <view class='one'>
+                <text class='name'>{{item.taskName}}</text>
+                <view class='money'>{{item.price}}</view>
+              </view>
+              <view class='se'>
+                <view class='F'>
+                  <image src='/images/icon/location.png' style='width:28rpx;height:28rpx;'></image>
+                  <view>{{item.addr}}</view>
+                </view>
+                <view class='S'>
+                  <image src='/images/order/time.png' style='width:28rpx;height:28rpx;'></image>
+                  <view>{{item.howLong}}</view>
+                </view>
+              </view>
+
+              <view class='th'>
+                <view class='rijie'>{{item.style}}</view>
+                <view class='renqi'>{{item.isHot}}</view>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </swiper-item>
+
+    </block>
+  </swiper>
 </view>
